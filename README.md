@@ -74,3 +74,4 @@ This project is licensed under the GNU License - see the [LICENSE.md](LICENSE.md
 ## Acknowledgments
 
 * This is my dummy project while learning JAVA and game development.
+* Bugs, Errors, Code duplications and Code optimizations are welcome
