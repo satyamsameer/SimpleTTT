@@ -47,13 +47,13 @@ End with an example of getting some data out of the system or using it for a lit
 Some screen shots from the software.
 
 ```
-![Initial Screen](https://github.com/altercation/solarized/raw/master/img/solarized-palette.png)
+![Initial Screen](https://github.com/satyamsameer/SimpleTTT/blob/master/screenshots/1.png)
 
-![Between Gameplay](https://github.com/altercation/solarized/raw/master/img/solarized-palette.png)
+![Between Gameplay](https://github.com/satyamsameer/SimpleTTT/blob/master/screenshots/2.png)
 
-![Congratulations](https://github.com/altercation/solarized/raw/master/img/solarized-palette.png)
+![Congratulations](https://github.com/satyamsameer/SimpleTTT/blob/master/screenshots/3.png)
 
-![Draw](https://github.com/altercation/solarized/raw/master/img/solarized-palette.png)
+![Draw](https://github.com/satyamsameer/SimpleTTT/blob/master/screenshots/4.png)
 
 ```
 
