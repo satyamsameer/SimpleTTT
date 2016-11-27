@@ -14,7 +14,7 @@ A Simple Tic-Tc-Toe Java based GUI game implementation.
 
 ### Prerequisites
 
-What things you need to deploy the project and links to install them -
+What things you need to deploy the project and details of them -
 
 ```
 - Git setup on your machine.

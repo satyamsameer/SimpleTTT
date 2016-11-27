@@ -1,5 +1,7 @@
 /*
- * This SimpleBoard Game on Tic-Tc-Toe is ceated by Sameer Satyam.
+ * This SimpleBoard Game on Tic-Tc-Toe is ceated by Sameer Satyam [satyamsameer].
+ * Licensed under
+ * GNU GENERAL PUBLIC LICENSE   Version 3, 29 June 2007
  * General public don not use any code copied directly from the source without any permissions.
  */
 package TTT;
@@ -52,7 +54,7 @@ public class SimpleBoard extends JFrame implements ActionListener{
 	};
 
 	/** The buttons. */
-	private JButton buttons[]=new JButton[9]; // GUI buttons array
+	private JButton buttons[]=new JButton[9]; // GUI Game area buttons array
 	
 	/** The btn new button 2. */
 	JButton btnNewButton_2 = new JButton("X"); //For computer turn button
@@ -177,7 +179,7 @@ public class SimpleBoard extends JFrame implements ActionListener{
 		});
 		panel_1.add(btnNewButton_2);
 
-		/*Hard Checkbox*/
+		/*Combobox for modes*/
 		combox.setBackground(Color.WHITE);
 		combox.setForeground(Color.BLACK);
 		combox.setSelectedIndex(0);
