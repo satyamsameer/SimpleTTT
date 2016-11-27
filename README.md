@@ -56,7 +56,7 @@ Some screen shots from the software.
 
 ## Contributing
 
-Only Me.
+* [satyamsameer](https://github.com/satyamsameer)
 
 ## Version
 
