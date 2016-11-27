@@ -33,7 +33,7 @@ import javax.swing.border.EmptyBorder;
  * The Class SimpleBoard.
  * 
  * A Simple Tic-Tc-Toe Java based GUI game implementation
-	 * - Two players One player is User and other one is computer.
+	 * - Two players one player is User and other one is computer.
 	 * - Have three modes Easy, Medium and Hard (Unbeatable)
 	 * - Fixed Priority and Rule based logic is implemented in this software
  */

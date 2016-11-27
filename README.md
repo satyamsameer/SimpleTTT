@@ -3,25 +3,32 @@ SimpleTTT repository for a simple one player java based Tic-Tac-Toe Game.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+### About Project
+
+```
+A Simple Tic-Tc-Toe Java based GUI game implementation.
+	- Two players one player is User and other one is computer.
+	- Have three modes Easy, Medium and Hard (Unbeatable).
+	- Fixed Priority and Rule based logic is implemented in this software.
+```
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+What things you need to deploy the project and links to install them
 
 ```
-Git setup on your machine.
-Any JAVA based IDE for editing.
-Java JDK/JRE 8 or later installed.
-Any system Linux/MacOSX/Windows.
+- Git setup on your machine.
+- Any JAVA based IDE for editing.
+- Java JDK/JRE 8 or later installed.
+- Any system Linux/MacOSX/Windows.
 ```
 
-### Installing
+### Usage and Deployment
 
-A step by step series of examples that tell you have to get a development env running
+A step by step series that tell you how to get a development environment and project up and running. You can run it without any installation as it is cross platform by following the below mentioned steps.
 
 This is a source code repository for a JAVA based GUI software so no installation required.
-The following steps are required for creating a .jar executable in Eclipse.
+The following steps are required for editing and creating a .jar executable in Eclipse.
 
 ```
 1. git clone <repoRemoteName> Pull the repository using repository URL using Git Bash.
@@ -39,21 +46,16 @@ End with an example of getting some data out of the system or using it for a lit
 
 Some screen shots from the software.
 
-### Break down into end to end tests
+```
+![Initial Screen](https://github.com/altercation/solarized/raw/master/img/solarized-palette.png)
+
+![Between Gameplay](https://github.com/altercation/solarized/raw/master/img/solarized-palette.png)
+
+![Congratulations](https://github.com/altercation/solarized/raw/master/img/solarized-palette.png)
+
+![Draw](https://github.com/altercation/solarized/raw/master/img/solarized-palette.png)
 
 ```
-Give an example
-```
-
-### And coding style tests
-
-```
-Give an example
-```
-
-## Deployment
-
-You can run it without any installation as it is cross platform by following the above mentioned steps.
 
 ## Built With
 
