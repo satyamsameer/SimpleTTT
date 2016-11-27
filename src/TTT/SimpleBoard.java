@@ -440,7 +440,7 @@ public class SimpleBoard extends JFrame implements ActionListener{
 			combox.setEnabled(true);
 			btnNewButton_2.setEnabled(true);
 		} else if(count == 9 && win == false){
-			JOptionPane.showMessageDialog(null,"The game was tie!","Oops !",JOptionPane.PLAIN_MESSAGE);
+			JOptionPane.showMessageDialog(null,"Game draw!","Oops !",JOptionPane.PLAIN_MESSAGE);
 			reset();
 			combox.setEnabled(true);
 			btnNewButton_2.setEnabled(true);
