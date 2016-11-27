@@ -1,5 +1,5 @@
 # SimpleTTT
-SimpleTTT repository for a simple one player java based Tic-Tac-Toe Game.
+SimpleTTT repository for a simple one player Java based Tic-Tac-Toe Game.
 
 ## Getting Started
 
@@ -14,33 +14,30 @@ A Simple Tic-Tc-Toe Java based GUI game implementation.
 
 ### Prerequisites
 
-What things you need to deploy the project and links to install them
+What things you need to deploy the project and links to install them -
 
 ```
 - Git setup on your machine.
 - Any JAVA based IDE for editing.
 - Java JDK/JRE 8 or later installed.
-- Any system Linux/MacOSX/Windows.
+- Any system with Linux/MacOSX/Windows.
 ```
 
 ### Usage and Deployment
 
-A step by step series that tell you how to get a development environment and project up and running. You can run it without any installation as it is cross platform by following the below mentioned steps.
+A step by step series that tell you how to get a development environment and project up and running. You can run it without any installation as it is cross platform (JAVA based GUI software) by following the below mentioned steps.
 
-This is a source code repository for a JAVA based GUI software so no installation required.
-The following steps are required for editing and creating a .jar executable in Eclipse.
+The following steps are required for setting source code in Eclipse IDE and creating a .jar executable in Eclipse.
 
 ```
 1. git clone <repoRemoteName> Pull the repository using repository URL using Git Bash.
 2. Create a same name Java Project i.e., SimpleTTT in workspace.
 3. Convert it to Java project: Add nature and buildCommand elements from other Java project to your .project file (this is optional).
-4. Then from Project > Properties > Java Build Path > Source add your source folders (and possible libraries).
+4. Then from Project > Properties > Java Build Path > Source, add your source file and folders (and possible libraries).
 5. Then run the SimpleBoard.java
 Note: If you want the .jar executable file export the build using Eclipse.
 
 ```
-
-End with an example of getting some data out of the system or using it for a little demo
 
 ## Screen Shots
 
