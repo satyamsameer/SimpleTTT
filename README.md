@@ -63,7 +63,7 @@ Only Me.
 
 ## Version
 
-Current version 0.1 
+Current version v1.0 
 
 ## Authors
 
