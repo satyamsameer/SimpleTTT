@@ -46,7 +46,6 @@ End with an example of getting some data out of the system or using it for a lit
 
 Some screen shots from the software.
 
-```
 ![Initial Screen](https://github.com/satyamsameer/SimpleTTT/blob/master/screenshots/1.png)
 
 ![Between Gameplay](https://github.com/satyamsameer/SimpleTTT/blob/master/screenshots/2.png)
@@ -55,7 +54,6 @@ Some screen shots from the software.
 
 ![Draw](https://github.com/satyamsameer/SimpleTTT/blob/master/screenshots/4.png)
 
-```
 
 ## Built With
 
