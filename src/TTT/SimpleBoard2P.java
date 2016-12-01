@@ -109,6 +109,7 @@ public class SimpleBoard2P extends JFrame implements ActionListener{
 		JButton btnNewButton = new JButton("Exit");
 		btnNewButton.setForeground(new Color(255, 0, 0));
 		btnNewButton.setBackground(SystemColor.menu);
+		btnNewButton.setToolTipText("Exit");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				System.exit(0);
@@ -119,6 +120,7 @@ public class SimpleBoard2P extends JFrame implements ActionListener{
 		JButton btnNewButton_1 = new JButton("Reset");
 		btnNewButton_1.setForeground(new Color(0, 204, 0));
 		btnNewButton_1.setBackground(SystemColor.menu);
+		btnNewButton_1.setToolTipText("Reset");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				reset();
@@ -136,7 +138,7 @@ public class SimpleBoard2P extends JFrame implements ActionListener{
 		JMenuBar mb = new JMenuBar();
 		JMenu switchg = new JMenu(" Gameplay");
 		switchg.setMnemonic('g');
-		switchg.setToolTipText("Switch to Gameplay");
+		switchg.setToolTipText("Switch Gameplay");
 		JMenuItem onep=new JMenuItem("Single player");
 		onep.setToolTipText("Single player Gameplay");
 		onep.setMnemonic('s');

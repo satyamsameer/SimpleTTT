@@ -7,7 +7,8 @@ SimpleTTT repository for a simple one player Java based Tic-Tac-Toe Game.
 
 ```
 A Simple Tic-Tc-Toe Java based GUI game implementation.
-	- Two players one player is User and other one is computer.
+	- In Single Player one player is user and other one is computer.
+	- In two player both players have the their turns one by one.
 	- Have three modes Easy, Medium and Hard (Unbeatable).
 	- Fixed Priority and Rule based logic is implemented in this software.
 ```
@@ -58,9 +59,10 @@ Some screen shots from the software.
 
 * [satyamsameer](https://github.com/satyamsameer)
 
-## Version
+## Versions
 
-Current version v1.0 
+Version v1.0 - Single Player
+Current version - Both single and two player gameplay
 
 ## Authors
 
