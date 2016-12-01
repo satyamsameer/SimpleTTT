@@ -51,7 +51,7 @@ Some screen shots from the software.
 
 * [Java JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) - Java Development Kit
 * [Eclipse](http://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/lunasr2) - IDE
-* [Git SCM](https://git-scm.com/downloads) - Online Repository Host Github
+* [Git SCM](https://git-scm.com/downloads) - Project management tool
 
 ## Contributing
 
