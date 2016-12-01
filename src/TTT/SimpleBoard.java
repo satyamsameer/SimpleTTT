@@ -2,18 +2,18 @@
  * This SimpleBoard Game on Tic-Tc-Toe is ceated by Sameer Satyam [satyamsameer].
  * Licensed under
  * GNU GENERAL PUBLIC LICENSE   Version 3, 29 June 2007
- * General public don not use any code copied directly from the source without any permissions.
+ * General public do not use any code copied directly from the source without the permissions.
  */
 package TTT;
 
 import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.SystemColor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Random;
@@ -23,10 +23,13 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.KeyStroke;
 import javax.swing.SwingConstants;
-import javax.swing.UIManager;
 import javax.swing.border.BevelBorder;
 import javax.swing.border.EmptyBorder;
 
@@ -35,7 +38,8 @@ import javax.swing.border.EmptyBorder;
  * The Class SimpleBoard.
  * 
  * A Simple Tic-Tc-Toe Java based GUI game implementation
-	 * - Two players one player is User and other one is computer.
+	 * - In Single Player one player is User and other one is computer.
+	 * - In two player both players have the their turns one by one
 	 * - Have three modes Easy, Medium and Hard (Unbeatable)
 	 * - Fixed Priority and Rule based logic is implemented in this software
  */
@@ -77,31 +81,12 @@ public class SimpleBoard extends JFrame implements ActionListener{
 	/** The combox. */
 	JComboBox<String> combox=new JComboBox<String>(choice);  // Combobox for changing mode
 
-	/**
-	 * The main method.
-	 *
-	 * @param args the arguments
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			@Override
-			public void run() {
-				try {
-					UIManager.setLookAndFeel("javax.swing.plaf.metal.MetalLookAndFeel");
-					SimpleBoard frame = new SimpleBoard();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
+	
 	/**
 	 * Instantiates a new simple board. - Frame for the Game as Constructor
 	 */
 	public SimpleBoard() {
-		setTitle("Tic-Tac-Toe");
+		setTitle("Tic-Tac-Toe: One P");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 291, 420);
@@ -143,6 +128,28 @@ public class SimpleBoard extends JFrame implements ActionListener{
 		lblNewLabel.setMaximumSize(new Dimension(270, 30));
 		lblNewLabel.setText("Start - Player-O Computer-X.");
 		panel_1.add(lblNewLabel);
+		
+		/*JMenu*/
+		JMenuBar mb = new JMenuBar();
+		JMenu switchg = new JMenu(" Gameplay");
+		switchg.setMnemonic('g');
+		switchg.setToolTipText("Switch to Gameplay");
+		JMenuItem twop=new JMenuItem("Two player");
+		twop.setToolTipText("Two player Gameplay");
+		twop.setMnemonic('t');
+		twop.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_T,ActionEvent.ALT_MASK | ActionEvent.SHIFT_MASK));//Open PDF
+		twop.addActionListener(new ActionListener() {
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			buttons=null;
+			contentPane=null;
+			dispose();
+			new SimpleBoard2P();
+			}
+		});
+		switchg.add(twop);
+		mb.add(switchg);
+		setJMenuBar(mb);
 
 		/*Tool buttons*/
 		JButton btnNewButton = new JButton("Exit");
@@ -190,6 +197,8 @@ public class SimpleBoard extends JFrame implements ActionListener{
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_1.setBounds(58, 371, 167, 14);
 		contentPane.add(lblNewLabel_1);
+		setLocationRelativeTo(null);
+		setVisible(true);
 	}
 
 	/**
