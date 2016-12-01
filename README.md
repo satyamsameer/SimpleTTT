@@ -59,8 +59,8 @@ Some screen shots from the software.
 
 ## Versions
 
-Version v1.0 - Single Player
-Current version - Both single and two player gameplay
+* Version v1.0 - Single Player
+* Current version - Both single and two player gameplay
 
 ## Authors
 
