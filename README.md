@@ -1,5 +1,5 @@
 # SimpleTTT
-SimpleTTT repository for a simple one player Java based Tic-Tac-Toe Game.
+SimpleTTT repository for a simple one player and two player Java based Tic-Tac-Toe Game.
 
 ## Getting Started
 
@@ -44,9 +44,7 @@ Note: If you want the .jar executable file export the build using Eclipse.
 
 Some screen shots from the software.
 
-![Initial Screen](https://github.com/satyamsameer/SimpleTTT/blob/master/screenshots/1.png) ![Between Gameplay](https://github.com/satyamsameer/SimpleTTT/blob/master/screenshots/2.png) ![Congratulations](https://github.com/satyamsameer/SimpleTTT/blob/master/screenshots/3.png)
-
- ![Draw](https://github.com/satyamsameer/SimpleTTT/blob/master/screenshots/4.png) ![Two Player Mode](https://github.com/satyamsameer/SimpleTTT/blob/master/screenshots/5.png) ![Gameplay Menu](https://github.com/satyamsameer/SimpleTTT/blob/master/screenshots/6.png)
+![Initial Screen](https://github.com/satyamsameer/SimpleTTT/blob/master/screenshots/1.png) ![Between Gameplay](https://github.com/satyamsameer/SimpleTTT/blob/master/screenshots/2.png) ![Congratulations](https://github.com/satyamsameer/SimpleTTT/blob/master/screenshots/3.png) ![Draw](https://github.com/satyamsameer/SimpleTTT/blob/master/screenshots/4.png) ![Two Player Mode](https://github.com/satyamsameer/SimpleTTT/blob/master/screenshots/5.png) ![Gameplay Menu](https://github.com/satyamsameer/SimpleTTT/blob/master/screenshots/6.png)
 
 
 ## Built With
