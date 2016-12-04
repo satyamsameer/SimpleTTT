@@ -65,7 +65,7 @@ public class SimpleBoard2P extends JFrame implements ActionListener{
 		setTitle("Tic-Tac-Toe: Two P");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 291, 420);
+		setSize(291, 454);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -128,10 +128,10 @@ public class SimpleBoard2P extends JFrame implements ActionListener{
 		});
 		panel_1.add(btnNewButton_1);
 
-		JLabel lblNewLabel_1 = new JLabel("Created by - Sameer Satyam");
+		JLabel lblNewLabel_1 = new JLabel("Copyright \u00a9 2016 Sameer Satyam");
 		lblNewLabel_1.setFont(new Font("Segoe UI Semibold", Font.ITALIC, 11));
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_1.setBounds(58, 371, 167, 14);
+		lblNewLabel_1.setBounds(35, 371, 200, 14);
 		contentPane.add(lblNewLabel_1);
 
 		/*JMenu*/
