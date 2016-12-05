@@ -10,10 +10,12 @@ import java.awt.*;
 import java.awt.event.*;
 
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.KeyStroke;
+import javax.swing.SwingConstants;
 import javax.swing.border.*;
 import javax.swing.*;
 
@@ -56,6 +58,16 @@ public class SimpleBoard2P extends JFrame implements ActionListener{
 	
 	/** The lbl new label. */
 	JLabel lblNewLabel = new JLabel("New label");
+	
+	private int scorec=0;
+	
+	private int scorep=0;
+	
+	/** The scorePanel new label. */
+	JLabel scorePanel = new JLabel("");
+	
+	/** Html string variable.*/
+	String HTMLlabelStr="";
 
 	/**
 	 * Instantiates a new simple board 2 P.
@@ -65,7 +77,7 @@ public class SimpleBoard2P extends JFrame implements ActionListener{
 		setTitle("Tic-Tac-Toe: Two P");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setSize(291, 454);
+		setSize(291, 500);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -91,7 +103,7 @@ public class SimpleBoard2P extends JFrame implements ActionListener{
 		JPanel panel_1 = new JPanel();
 		panel_1.setBackground(new Color(0, 0, 0));
 		panel_1.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
-		panel_1.setBounds(10, 286, 264, 74);
+		panel_1.setBounds(10, 286, 264, 130);
 		contentPane.add(panel_1);
 		lblNewLabel.setForeground(Color.WHITE);
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
@@ -112,6 +124,8 @@ public class SimpleBoard2P extends JFrame implements ActionListener{
 		btnNewButton.setToolTipText("Exit");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				scorec=0;scorep=0;
+				buttons=null;
 				System.exit(0);
 			}
 		});
@@ -122,8 +136,10 @@ public class SimpleBoard2P extends JFrame implements ActionListener{
 		btnNewButton_1.setBackground(SystemColor.menu);
 		btnNewButton_1.setToolTipText("Reset");
 		btnNewButton_1.addActionListener(new ActionListener() {
+			@Override
 			public void actionPerformed(ActionEvent e) {
 				reset();
+				resetBoard();
 			}
 		});
 		panel_1.add(btnNewButton_1);
@@ -131,8 +147,22 @@ public class SimpleBoard2P extends JFrame implements ActionListener{
 		JLabel lblNewLabel_1 = new JLabel("Copyright \u00a9 2016 Sameer Satyam");
 		lblNewLabel_1.setFont(new Font("Segoe UI Semibold", Font.ITALIC, 11));
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_1.setBounds(35, 371, 200, 14);
+		lblNewLabel_1.setBounds(35, 420, 200, 14);
 		contentPane.add(lblNewLabel_1);
+		
+		
+		/*Score Panel*/
+		scorePanel.setForeground(Color.WHITE);
+		scorePanel.setHorizontalAlignment(SwingConstants.CENTER);
+		scorePanel.setFont(new Font("Tahoma", Font.BOLD, 30));
+		scorePanel.setBackground(new Color(255, 102, 0));
+
+		scorePanel.setBorder(new BevelBorder(BevelBorder.RAISED, null, null, null, null));
+		scorePanel.setPreferredSize(new Dimension(250, 58));
+		scorePanel.setMinimumSize(new Dimension(250, 30));
+		scorePanel.setMaximumSize(new Dimension(250, 30));
+		updateScoreBoard(0,0);
+		panel_1.add(scorePanel);
 
 		/*JMenu*/
 		JMenuBar mb = new JMenuBar();
@@ -158,6 +188,23 @@ public class SimpleBoard2P extends JFrame implements ActionListener{
 		setLocationRelativeTo(null);
 		setVisible(true);
 	}
+	
+	/**
+	 * Updates the Score Board.
+	 */
+	public void updateScoreBoard(int o,int x){
+		HTMLlabelStr="<html><b color='blue'>"+o+"</b> / <b color='red'>"+x+"</b></html>";
+		scorePanel.setText(HTMLlabelStr);
+	}
+	
+	/**
+	 * Resets the Score Board.
+	 */
+	public void resetBoard(){
+		scorec=0;scorep=0;
+		updateScoreBoard(scorep,scorec);
+	}
+	
 	
 	/* (non-Javadoc)
 	 * @see java.awt.event.ActionListener#actionPerformed(java.awt.event.ActionEvent)
@@ -199,6 +246,12 @@ public class SimpleBoard2P extends JFrame implements ActionListener{
 		}
 		/*Message*/
 		if(win == true){
+			if(letter.equalsIgnoreCase("X")){
+				scorec++;
+			}else{
+				scorep++;
+			}
+			updateScoreBoard(scorep,scorec);
 			JOptionPane.showMessageDialog(null, letter + " wins the game!");
 			reset();
 		} else if(count == 9 && win == false){

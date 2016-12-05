@@ -13,6 +13,8 @@ import java.awt.GridLayout;
 import java.awt.SystemColor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 import java.awt.event.KeyEvent;
 import java.util.Arrays;
 import java.util.HashSet;
@@ -72,8 +74,18 @@ public class SimpleBoard extends JFrame implements ActionListener{
 	/** The win. */
 	private boolean win = false;
 	
+	private int scorec=0;
+	
+	private int scorep=0;
+	
 	/** The lbl new label. */
 	JLabel lblNewLabel = new JLabel("");
+	
+	/** The scorePanel new label. */
+	JLabel scorePanel = new JLabel("");
+	
+	/** Html string variable.*/
+	String HTMLlabelStr="";
 	
 	/** The choice. */
 	String[] choice = {"Easy", "Medium", "Hard"};  // Easy-random Medium-counter measures Hard-Unbeatable
@@ -89,7 +101,7 @@ public class SimpleBoard extends JFrame implements ActionListener{
 		setTitle("Tic-Tac-Toe: One P");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setSize(291, 454);
+		setSize(291, 500);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -115,7 +127,7 @@ public class SimpleBoard extends JFrame implements ActionListener{
 		JPanel panel_1 = new JPanel();
 		panel_1.setBackground(new Color(0, 0, 0));
 		panel_1.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
-		panel_1.setBounds(10, 286, 264, 74);
+		panel_1.setBounds(10, 286, 264, 130);
 		contentPane.add(panel_1);
 		lblNewLabel.setForeground(Color.WHITE);
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
@@ -128,6 +140,7 @@ public class SimpleBoard extends JFrame implements ActionListener{
 		lblNewLabel.setMaximumSize(new Dimension(270, 30));
 		lblNewLabel.setText("Start - Player-O Computer-X.");
 		panel_1.add(lblNewLabel);
+		
 		
 		/*JMenu*/
 		JMenuBar mb = new JMenuBar();
@@ -160,6 +173,7 @@ public class SimpleBoard extends JFrame implements ActionListener{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				buttons=null;
+				scorec=0;scorep=0;
 				System.exit(0);
 			}
 		});
@@ -173,6 +187,7 @@ public class SimpleBoard extends JFrame implements ActionListener{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				reset();
+				resetBoard();
 			}
 		});
 		panel_1.add(btnNewButton_1);
@@ -192,17 +207,56 @@ public class SimpleBoard extends JFrame implements ActionListener{
 		combox.setBackground(Color.WHITE);
 		combox.setForeground(Color.BLACK);
 		combox.setSelectedIndex(0);
+		combox.addItemListener(new ItemChangeListener());
 		panel_1.add(combox);
+		
+		/*Score Panel*/
+		scorePanel.setForeground(Color.WHITE);
+		scorePanel.setHorizontalAlignment(SwingConstants.CENTER);
+		scorePanel.setFont(new Font("Tahoma", Font.BOLD, 30));
+		scorePanel.setBackground(new Color(255, 102, 0));
 
+		scorePanel.setBorder(new BevelBorder(BevelBorder.RAISED, null, null, null, null));
+		scorePanel.setPreferredSize(new Dimension(250, 58));
+		scorePanel.setMinimumSize(new Dimension(250, 30));
+		scorePanel.setMaximumSize(new Dimension(250, 30));
+		updateScoreBoard(0,0);
+		panel_1.add(scorePanel);
+		
 		JLabel lblNewLabel_1 = new JLabel("Copyright \u00a9 2016 Sameer Satyam");
 		lblNewLabel_1.setFont(new Font("Segoe UI Semibold", Font.ITALIC, 11));
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_1.setBounds(35, 371, 200, 14);
+		lblNewLabel_1.setBounds(35, 420, 200, 14);
 		contentPane.add(lblNewLabel_1);
 		setLocationRelativeTo(null);
 		setVisible(true);
 	}
 
+	class ItemChangeListener implements ItemListener{
+	    @Override
+	    public void itemStateChanged(ItemEvent event) {
+	       if (event.getStateChange() == ItemEvent.SELECTED) {
+	          //Object item = event.getItem();
+	          	resetBoard();
+	       }
+	    }      
+	}
+	
+	/**
+	 * Updates the Score Board.
+	 */
+	public void updateScoreBoard(int o,int x){
+		HTMLlabelStr="<html><b color='blue'>"+o+"</b> / <b color='red'>"+x+"</b></html>";
+		scorePanel.setText(HTMLlabelStr);
+	}
+	
+	/**
+	 * Resets the Score Board.
+	 */
+	public void resetBoard(){
+		scorec=0;scorep=0;
+		updateScoreBoard(scorep,scorec);
+	}
 	/**
 	 * Checks if is win.
 	 */
@@ -448,6 +502,12 @@ public class SimpleBoard extends JFrame implements ActionListener{
 		}
 		/*Message*/
 		if(win == true){
+			if(letter.equalsIgnoreCase("X")){
+				scorec++;
+			}else{
+				scorep++;
+			}
+			updateScoreBoard(scorep,scorec);
 			JOptionPane.showMessageDialog(null, letter + " wins the game!","Congratulations !",JOptionPane.INFORMATION_MESSAGE);
 			reset();
 			combox.setEnabled(true);
